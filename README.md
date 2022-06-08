@@ -1,5 +1,5 @@
 # git-training-sessions
-## contain git command in the scope of git advanced sessions:
+## The following git commands are in the scope of git advanced sessions:
 
 git reset --hard --soft --mixed
 
