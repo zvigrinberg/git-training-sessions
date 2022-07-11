@@ -43,3 +43,5 @@ git show commit-id [--name-only] [--format=email/fuller]
 git blame -  git blame hello.there -l(long revisions)
 
 git bisect
+
+git restore
