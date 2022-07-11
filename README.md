@@ -45,3 +45,6 @@ git blame -  git blame hello.there -l(long revisions)
 git bisect
 
 git restore
+
+git cherry-pick
+ 
