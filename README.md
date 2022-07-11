@@ -41,3 +41,5 @@ git request-pull -p start-commit, repo/url, end commit
 git show commit-id [--name-only] [--format=email/fuller]
 
 git blame -  git blame hello.there -l(long revisions)
+
+git bisect
