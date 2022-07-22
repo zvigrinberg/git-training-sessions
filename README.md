@@ -8,7 +8,7 @@ git reflog
 git rebase -i
 
 git checkout specific file, -p(hunks) , ref + specific file, checkout to resolve, 
- conflicts with ours/theirs, --orpahn , to start a branch with a clean history, checkout -b to start new branch , git checkout HEAD . --no-overlay eliminate all indexed and not staged files from index and working tree(like git reset --hard).
+ conflicts with ours/theirs, --orpahn , to start a branch with a clean history, checkout -b to start new branch , git checkout HEAD . --no-overlay eliminate all indexed and not staged files from index and working tree(like git reset --hard), checkout from rev-list, checkout from reflog/log , and etc.
 
 git push -u origin new-branch-name(along with git checkout -b new-branch-name).
 
