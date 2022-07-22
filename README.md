@@ -49,4 +49,6 @@ git restore
 git cherry-pick
 
 git remote
+
+git rev-list --all --count
  
