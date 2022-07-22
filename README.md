@@ -52,3 +52,5 @@ git remote
 
 git rev-list --all --count
  
+ git submodule
+ 
