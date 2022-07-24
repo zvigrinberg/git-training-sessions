@@ -18,7 +18,7 @@ git pull -- dry-run , --rebase
 
 git merge git merge -s recursive -Xtheirs / -Xours / <allow-unrelated-histories>
 
-git merge -s octopus HEAD@{1} HEAD@{6} / branchA BranchB BranchC...
+git merge -s octopus HEAD@{1} HEAD@{6} / branchA BranchB BranchC...\
 git merge --squash branch/ref/commit.
 
 git commit --amend --no-edit
