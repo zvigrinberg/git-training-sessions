@@ -32,7 +32,7 @@ git stash save, apply, pop,clear,show
 
 git diff HEAD, --cached(only comparing staged files with reference to HEAD/Commit ID.
 
-git diff COMMIT_ID, REF, tag.
+git diff COMMIT_ID/REF/tag.
 
 git diff REF1, REF2.
 
