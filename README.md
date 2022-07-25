@@ -32,7 +32,7 @@ git push -u origin new-branch-name(along with git checkout -b new-branch-name).
 
 
 
-git commit --amend --no-edit
+git commit --amend --no-edit --signoff by user.
 git log branch_name/tag name
 
 git diff HEAD, --cached(only comparing staged files with reference to HEAD/Commit ID.
