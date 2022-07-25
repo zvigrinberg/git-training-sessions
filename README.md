@@ -47,6 +47,8 @@ git bisect
 
 git restore
 
+git revert
+
 git cherry-pick
 
 git remote
