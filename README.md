@@ -19,9 +19,13 @@ git stash save, apply, pop,clear,show
 
 git rebase -i
 
-git restore
+git rebase change "forked from" branch - git rebase --onto=main oldForkBranch newForkBranch
 
-git revert
+git rebase insert a new commit in the middle of commits tree(all commits after new commit will be re-hashed, so it's only suitable for trees that their "right part/upper part" wasn't published to remote repo - optional.
+
+git restore --staged --worktree
+
+git revert - will be show how to use in the git bisect demo
 
 divide and remain here only basic checkout flags:
 
