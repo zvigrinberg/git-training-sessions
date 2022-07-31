@@ -63,4 +63,7 @@ git reflog
  
 (*)git request-pull -p start-commit, repo/url, end commit
  
+ ## git bisect demo
+ Link to repo that show how to use git bisect with example [can be found here](https://github.com/zvigrinberg/git-bisect-demo)
+ 
  git bisect
