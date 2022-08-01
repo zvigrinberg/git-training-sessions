@@ -1,7 +1,7 @@
 # git-training-sessions
 ## The following git commands are in the scope of git advanced sessions:
 
-Intro: Give brief on index, working-tree(working area), local-repo, remote repo.
+Intro: Give brief on working-tree(working area), index(Staging area), local-repo, remote repo.
 
 git remote
 
@@ -29,11 +29,17 @@ git revert - will be show how to use in the git bisect demo
 
 divide and remain here only basic checkout flags:
 
-git checkout specific file, -p(hunks) , ref + specific file, checkout to resolve, 
- conflicts with ours/theirs, --orpahn , to start a branch with a clean history, checkout -b to start new branch , git checkout HEAD . --no-overlay eliminate all indexed and not staged files from index and working tree(like git reset --hard), checkout from rev-list, checkout from reflog/log , and etc.
+git checkout specific file from ref
+git checkout -b to start new branch
+git checkout to resolve conflicts with ours/theirs
+checkout from a commit from git log or HEAD~n from git reflog
+git checkout --orphan to start a branch with new history, 
+git checkout HEAD . --no-overlay eliminate all indexed and not staged files from index and working tree(like git reset --hard), 
 
-git push -u origin new-branch-name(along with git checkout -b new-branch-name).
 
+git push -u origin new-branch-name(along with git checkout -b new-branch-name). 
+git push -f(when you have no choice)
+git push remote localbranch:remotebranch.
 
 
 git commit --amend --no-edit --signoff by user.
@@ -52,7 +58,6 @@ git merge git merge -s recursive -Xtheirs / -Xours / <allow-unrelated-histories>
 git show commit-id [--name-only] [--format=email/fuller]
 
 git blame -  git blame hello.there -l(long revisions)
-
 
 git merge -s octopus HEAD@{1} HEAD@{6} / branchA BranchB BranchC...\
 
