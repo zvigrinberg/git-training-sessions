@@ -39,12 +39,11 @@ git checkout --orphan to start a branch with new history, \
 git checkout HEAD . --no-overlay eliminate all indexed and not staged files from index and working tree(like git reset --hard)
 
 
-git push -u origin new-branch-name(along with git checkout -b new-branch-name). 
-git push -f(when you have no choice)
-git push remote localbranch:remotebranch.
+git push -u origin new-branch-name(along with git checkout -b new-branch-name). \
+git push -f(when you have no choice) \
+git push remote localbranch:remotebranch. \
 
-
-git commit --amend --no-edit --signoff by user.
+git commit -a --amend --no-edit --signoff by user.
 git log branch_name/tag name
 
 git diff HEAD, --cached(only comparing staged files with reference to HEAD/Commit ID.
@@ -64,11 +63,11 @@ git blame -  git blame hello.there -l(long revisions)
 git merge -s octopus HEAD@{1} HEAD@{6} / branchA BranchB BranchC...\
 
 
-git cherry-pick
+git cherry-pick (-n) commit_id
 
 git rev-list --all --count
  
-git rev-parse
+git rev-parse HEAD/ref
  
  git submodule(optional)
  
