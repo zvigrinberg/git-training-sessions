@@ -68,7 +68,7 @@ git rev-list --all --count
  
  git submodule(optional)
  
-git reflog
+git reflog HEAD/{branchName}
  
 (*)git request-pull -p start-commit, repo/url, end commit
  
