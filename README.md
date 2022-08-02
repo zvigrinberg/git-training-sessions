@@ -2,6 +2,8 @@
 ## The following git commands are in the scope of git advanced sessions:
 
 Intro: Give brief on working-tree(working area), index(Staging area), local-repo, remote repo.
+![image](https://user-images.githubusercontent.com/75700623/182334942-8fb8cecf-6aa5-4256-8a61-7b09125a941e.png)
+
 
 git remote
 
@@ -27,7 +29,7 @@ git restore --staged --worktree
 
 git revert - will be show how to use in the git bisect demo
 
-common checkout usages:
+common checkout usages(beside switching between branches in local repo):
 
 git checkout specific file from ref \
 git checkout -b to start new branch \
@@ -65,6 +67,8 @@ git merge -s octopus HEAD@{1} HEAD@{6} / branchA BranchB BranchC...\
 git cherry-pick
 
 git rev-list --all --count
+ 
+git rev-parse
  
  git submodule(optional)
  
