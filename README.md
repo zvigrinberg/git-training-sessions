@@ -17,7 +17,7 @@ git pull -- dry-run , --rebase
 
 git stash save, apply, pop,clear,show
 
-git rebase -i
+git rebase -i(demo at the bottom)
 
 git rebase change "forked from" branch - git rebase --onto=main oldForkBranch newForkBranch
 
@@ -27,14 +27,14 @@ git restore --staged --worktree
 
 git revert - will be show how to use in the git bisect demo
 
-divide and remain here only basic checkout flags:
+common checkout usages:
 
-git checkout specific file from ref
-git checkout -b to start new branch
-git checkout to resolve conflicts with ours/theirs
-checkout from a commit from git log or HEAD~n from git reflog
-git checkout --orphan to start a branch with new history, 
-git checkout HEAD . --no-overlay eliminate all indexed and not staged files from index and working tree(like git reset --hard), 
+git checkout specific file from ref \
+git checkout -b to start new branch \
+git checkout to resolve conflicts with ours/theirs \
+checkout from a commit from git log or HEAD~n from git reflog \
+git checkout --orphan to start a branch with new history, \
+git checkout HEAD . --no-overlay eliminate all indexed and not staged files from index and working tree(like git reset --hard)
 
 
 git push -u origin new-branch-name(along with git checkout -b new-branch-name). 
