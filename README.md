@@ -1,4 +1,4 @@
-# git-training-sessions
+# git-training-sessions - Main Page and index
 ## The following git commands are in the scope of git advanced sessions:
 
 Intro: Give brief on working-tree(working area), index(Staging area), local-repo, remote repo.
