@@ -34,7 +34,7 @@ git push
 git checkout feature/something
 git reset --hard feature/something~1
 git restore --source=feature/something@{1} . --worktree / --staged
-
+```
 
 3.third way(temp commit, resetting and checkout paths from temp commit):
 
@@ -50,7 +50,6 @@ git push
 git checkout feature/something
 git reset --hard feature/something~1
 git checkout feature/something@{1} .
-
 ```
 
 ## Use case 2
