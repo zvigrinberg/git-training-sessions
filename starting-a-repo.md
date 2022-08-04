@@ -40,6 +40,8 @@ git pull origin main
 git add -A
 git commit -m "initial commit containing important files"
 git fetch --all
+
+
 git branch --set-upstream-to=origin/main main
 git push
 
