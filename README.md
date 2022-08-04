@@ -56,6 +56,8 @@ git diff REF1, REF2.
 git merge --squash branch/ref/commit.
 
 git merge git merge -s recursive -Xtheirs / -Xours / <allow-unrelated-histories>
+ 
+git mergetool(show with meld in demo)
 
 git show commit-id [--name-only] [--format=email/fuller]
 
