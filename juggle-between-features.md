@@ -52,4 +52,25 @@ git reset --hard feature/something~1
 git checkout feature/something@{1} .
 ```
 
-## Use case 2
+## Use case 2 - Need to put a side a feature that is not mature for progressing with work(requirements not clear) but part of it is good, and move to another feature, continue with it, it's good but not complete, but in the meantime, a release branch should be closed before delivery urgently, and you must put it aside as well.
+
+```shell
+##on feature1
+git stash save feature1 initial temp work.
+git checkout feature2
+## work on feature2 and add to index or to worktree.
+git stash save feature2 progressive work.
+git checkout release
+## handle release branch' merges and testing ....
+git checkout feature2
+git stash list
+## according to the stash that show description containing feature2, pick the stash number, in this case:
+git stash apply stash@{0}
+## continue to work on feature2
+```
+
+Note: When finishing with the work on feature2 and with the work of featrue1, it's recommended to clear the stash list:
+```
+git stash clear
+```
+
