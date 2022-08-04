@@ -52,6 +52,8 @@ git reset --hard feature/something~1
 git checkout feature/something@{1} .
 ```
 
+4.fourth way(temp commit, resetting and cherry pick temp commit using git cherry-pick -n commitId).
+
 ## Use case 2 - Need to put a side a feature that is not mature for progressing with work(requirements not clear) but part of it is good, and move to another feature, continue with it, it's good but not complete, but in the meantime, a release branch should be closed before delivery urgently, and you must put it aside as well.
 
 ```shell
