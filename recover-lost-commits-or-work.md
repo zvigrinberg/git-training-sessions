@@ -12,15 +12,22 @@
    git log
    cd git-recovery
    ll
+   
+   ##case 1 - basic recovery.
    git log
+   ## on purpose deleting files from branch, commit them, and push to remote server.
    git rm -rf *
    git commit -m "delete all files"
    ll
    git push
+   ## reposition and setting HEAD to previous commit according to git log
    git reset --hard 1a40853d5af4a561405da51546581c30c009590d
    git log
    ll
+   ## force push to remote server to recover lost files..
    git push -f
+   
+   ##case 2 - advanced recovery.
    git checkout --orphan=evil
    ll
    git log
