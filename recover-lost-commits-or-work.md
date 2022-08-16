@@ -4,9 +4,11 @@
 2. see how to recover/restore commit and content using git log
 3. See malicious on purpose deleting files and history of a main branch
 4. See how to restore/recover history + content using git reflog. 
-5  see how to restore using git fsck --lost-found :
+5. see how to restore using git fsck --lost-found :
     git fsck --lost-found | awk '{ $2="commit" ; print $3}' | xargs git show --name-only
     git reset --hard <commit_sha>
+6. Show how to remove commit from tree:
+     git reset --hard HEAD^ 
 
 ## Procedure
 ```shell
