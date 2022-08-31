@@ -49,3 +49,4 @@
    git log
    git push -f -u origin main
    ```
+ ##case 3 - advanced recovery using git fsck --lost-found
