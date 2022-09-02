@@ -5,5 +5,7 @@
  - delete files temporarily, make operations without the files, and restore them from HEAD.
  - use reset --hard --soft --mixed in order to make mass updates of files with commits each iteration,  and resetting to checkpoints if there are mistakes and replay - show use-case with sed utility.
  - git diff HEAD, two refs, git diff, git diff --cached.
+ - git add -p for staging selected hunks from file. 
+ - git checkout -p, checkout chunks from file. 
  - Show git rm of external values file that shouldn't be part of the packed chart for packing helm chart and then reseting the working tree to HEAD after finishing packing helm charts.
-  
+ - commit --amend
