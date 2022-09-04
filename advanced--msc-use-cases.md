@@ -1,6 +1,16 @@
-# Commands
+# Miscellaneous/advanced Commands
 
- - merge -s OCTOPUS ( when there are no conflicts) - merge 2 branches or more into current branch suitable for cases where all branches working on different portion of repo, especially different directories(in this merge strategy , collisions are not allowed).
+ - merge --strategy=octopus ( when there are no conflicts) - merge 2 branches or more into current branch. suitable for cases where all branches working on different portion of repo, especially different directories(in this merge strategy , collisions are not allowed).
+```shell
+mkdir git-octopus-merge-demo
+cd git-octopus-merge-demo
+git init
+ echo "initial work" >> initial.txt ; git add initial.txt ; git commit -m "initial commit"
+for i in {1..3}; do git checkout main ; git checkout -b feature$i; mkdir dir$i; cd dir$i; echo  "file number $i" >> file$i.out; git add file$i.out; git commit -m "feature$i file" ; cd ..; done
+git checkout main
+git merge --strategy=octopus  feature1 feature2 feature3
+
+```
  - git fetch from other remote repo(not origin) + checkout from it into worktree/index.
  - delete files temporarily, make operations without the files, and restore them from HEAD.
  - use reset --hard --soft --mixed in order to make mass updates of files with commits each iteration,  and resetting to checkpoints if there are mistakes and replay - show use-case with sed utility.
