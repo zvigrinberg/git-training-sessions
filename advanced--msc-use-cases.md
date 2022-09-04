@@ -17,6 +17,37 @@ git merge --strategy=octopus  feature1 feature2 feature3
  
  - git add -p for staging selected hunks from file with edit hunk(e options in interactive menu)
  - then use git diff(implicit HEAD) --cached to see that only chunks selected are going to be added on next commit, this diff gives the difference between     ref and index.
+```shell
+   vi functions.java
+   git add functions.java
+   git commit -m "add functions.java"
+   git status
+   vi functions.java
+   git add -p functions.java
+   git status
+   vi functions.java
+   git restore --staged functions.java
+   git status
+   vi functions.java
+   git add -p functions.java
+   git status
+   git diff --cached
+   git diff
+   git commit -m "only mature function commited"
+   git status
+   git diff
+   ll
+   git stash not mature function saving
+   git stash save not mature function saving
+   git stash list
+   ll
+   vi file1.out
+   vi functions.java
+   git stash list
+   git stash pop
+
+
+```
  - git diff (implicit HEAD) - only changes relative to index.
  - git diff two refs, git diff - compare between two refs
  - git diff REF path/to/file, compare file in worktree or index relative to same file in REF
