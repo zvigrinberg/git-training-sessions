@@ -4,8 +4,12 @@
  - git fetch from other remote repo(not origin) + checkout from it into worktree/index.
  - delete files temporarily, make operations without the files, and restore them from HEAD.
  - use reset --hard --soft --mixed in order to make mass updates of files with commits each iteration,  and resetting to checkpoints if there are mistakes and replay - show use-case with sed utility.
- - git diff HEAD, two refs, git diff, git diff --cached.
- - git add -p for staging selected hunks from file. 
+ 
+ - git add -p for staging selected hunks from file with edit hunk(e options in interactive menu)
+ - then use git diff(implicit HEAD) --cached to see that only chunks selected are going to be added on next commit, this diff gives the difference between     ref and index.
+ - git diff (implicit HEAD) - only changes relative to index.
+ - git diff two refs, git diff - compare between two refs
+ - git diff REF path/to/file, compare file in worktree or index relative to same file in REF
  - git checkout -p, checkout chunks from file. 
  - Show git rm of external values file that shouldn't be part of the packed chart for packing helm chart and then reseting the working tree to HEAD after finishing packing helm charts.
  - commit --amend
