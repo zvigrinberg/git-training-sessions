@@ -1,4 +1,8 @@
-# Juggle Between two features or more 
+# Juggle Between two features or more/Work in parallel on two features
+
+## Background
+
+ Sometimes there is a need to work on at least 2 features/hotfixes in parallel, but at least one of them is not mature yet for commiting and pushing to the remote git server, and off course you don't want one feature to get in the way of the other one(and vice a versa).
 
 ## Use case 1 - Feature not mature for commiting, need to put it a side and fix production bug.
 
