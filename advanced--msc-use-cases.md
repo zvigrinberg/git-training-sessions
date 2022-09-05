@@ -1,4 +1,4 @@
-# Miscellaneous/advanced Commands
+# Miscellaneous/advanced Use cases + Commands
 
  - merge --strategy=octopus ( when there are no conflicts) - merge 2 branches or more into current branch. suitable for cases where all branches working on different portion of repo, especially different directories(in this merge strategy , collisions are not allowed).
 ```shell
