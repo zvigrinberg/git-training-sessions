@@ -50,3 +50,20 @@
    git push -f -u origin main
    ```
  ##case 3 - advanced recovery using git fsck --lost-found
+ ```shell
+ echo "commit to be lost" >> lost.out ; git add lost.out ; git commit -m "commit to be lost and found" 
+ git log
+ # "remove" commit from commits tree
+ git reset --hard HEAD^
+ git log
+ # Show dangling commits with their commit message and their content.
+ git fsck --lost-found | awk '{ $2="commit" ; print $3}' | xargs git show --name-only
+ #Now you can pick the commit and merge it into your branch, if it's only one like in our case , you can run
+ git fsck --lost-found | awk '{ $2="commit" ; print $3}' | xargs -i git merge --ff-only {}
+ 
+
+ 
+ 
+ 
+ ```
+
