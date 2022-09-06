@@ -49,7 +49,7 @@
    git log
    git push -f -u origin main
    ```
- ##case 3 - advanced recovery using git fsck --lost-found
+ ## case 3 - advanced recovery using git fsck --lost-found
  ```shell
  echo "commit to be lost" >> lost.out ; git add lost.out ; git commit -m "commit to be lost and found" 
  git log
