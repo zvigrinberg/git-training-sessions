@@ -1,10 +1,28 @@
 # git-training-sessions - Main Page and index
-## The following git commands are in the scope of git advanced sessions:
 
-Intro: Give brief on working-tree(working area), index(Staging area), local-repo, remote repo.
+
+## Intro: Give brief on working-tree(working area), index(Staging area), local-repo, remote repo.
 ![image](https://user-images.githubusercontent.com/75700623/182334942-8fb8cecf-6aa5-4256-8a61-7b09125a941e.png)
+![img_1.png](img_1.png)
+![img.png](img.png)
 
 
+## Ordered Agenda
+1. Give an explanation about working-tree,index, local-repo, and remote repo.
+2. Explain what is HEAD in git
+   a. How it gets updated
+   b. Where is my HEAD - what is fast-forward and recursive 3 ways commit.
+   c. What is a detached HEAD state and how to get out of this state.
+   
+3. [Talk about use cases for starting repos and bring examples](./starting-a-repo.md)
+4. [Talk about working in parallel on at least 2 branches and bring examples](./juggle-between-features.md)
+5. [Discuss about ways to resolve merge and rebase conflicts ](./merging-and-solving-conflicts.md)
+6. [Illustrate Several ways how to recover lost data/commits](./recover-lost-commits-or-work.md)
+7. [Discuss about Rebase use cases and when tu use and when not to use, including demos](./rebase-use-cases.md)
+8. [Show variety of git commands and usages, some of them advanced, including demos. ](./advanced--msc-use-cases.md)
+     
+
+## The following git commands are in the scope of git advanced sessions:
 git remote
 
 git reset --hard --soft --mixed
