@@ -31,7 +31,7 @@
    ## force push to remote server to recover lost files..
    git push -f
    
-   ##case 2 - advanced recovery.
+   ##case 2 - advanced recovery using git reflog.
    git checkout --orphan=evil
    ll
    git log
