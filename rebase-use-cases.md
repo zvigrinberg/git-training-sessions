@@ -3,7 +3,7 @@
 ## When to use - Use-Cases
 1. When you want to integrate changes of feature/topic branch with mainstream branch and you want a linear history that left no clues or evidences of 
    merges, and merging the branch to mainstream branch will result in a merge commit because fast-forwarding the HEAD is not an option(only recursive 3  
-   ways commit)
+   ways merge is possible)
    
 2. When you started a feature branch featureA, and started to work on it, and then you forked another feature branch from it - featureB, and continue to work on it also, in this case, you might need to use rebase in the following 3 cases:
 
