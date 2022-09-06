@@ -17,13 +17,12 @@
       
 3. When you created a feature branch, and created a series of commits in it, and then you realize at the end, just before openning a PR to main, that you missed some work in the middle , and you want the history to be shown like this commit with its work is in the middle, although you "inserted" it in the past in retrospective with rebasing.
 
-4. When you created a feature branch, and created a lot of commits 
+4. When you created a feature branch, and created a lot of commits , and some of them you don't want to be merged into main branch at all, some of them you want to squash into another, and some of them you want to change commit message, the rebase option that lets you do all of that in one shot is git rebase -i(re-writing history)
 
 ## When not to use
 
  1. Do not use rebasing to replay commmits that already pushed to remote repo that other colleagues already pulled and worked with.
-    in other words, if main is the mainstream branch, and feature is some feature forked from main,  use -  rebase main feature, because rebase is changing
-    commit dates and hash values.
+    in other words, if main is the mainstream branch, and feature is some feature forked from main and is local, then use - rebase main feature, because rebase is changing commit id hash values, and otherwise it can be very confusing
 
 
 ### Procedures
@@ -34,6 +33,9 @@ for i in {1..4} ; do echo "sample work $i" >> $i.out; git add $i.out; git commit
 git log
 git checkout -b feature/additionalWork
 for i in {5..8} ; do echo "additional work $i" >> $i.out; git add $i.out; git commit -m "additional work $i"; done
+git checkout main
+echo "create directly commit in main" >> main.out; git add main.out; git commit -m "create directly commit in main"
+git checkout feature/additionalWork 
 git rebase main
 git log
 git checkout main
