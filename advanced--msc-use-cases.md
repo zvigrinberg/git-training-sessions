@@ -25,6 +25,9 @@ git merge --strategy=octopus  feature1 feature2 feature3
   # removing checked out directory from index and move it to be untracked, that way we can work in the directory with the new fetched directory but 
     after we disconnected it from the git repo by tell it not to track it.
   git reset --mixed.
+  #update back FETCH_HEAD to be origin instead of foreign remote repo.
+  git fetch.
+  
  ``` 
   - Use git reset --soft to "cancel" commits but save your current work on index and worktree 
     , __*Example:*__
