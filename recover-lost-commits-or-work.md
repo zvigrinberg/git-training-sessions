@@ -32,13 +32,13 @@
    git push -f
    
    ##case 2 - advanced recovery using git reflog.
-   git checkout --orphan=evil
+   git checkout --orphan=deletingBranch
    ll
    git log
    git rm -rf *
    git commit -m "delete history and all content" --allow-empty
    git log
-   git push -f -u origin evil:main
+   git push -f -u origin deletingBranch:main
    git branch -D main
    git branch -av
    ll
