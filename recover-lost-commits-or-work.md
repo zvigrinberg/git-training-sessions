@@ -60,10 +60,6 @@
  git fsck --lost-found | awk '{ $2="commit" ; print $3}' | xargs git show --name-only
  #Now you can pick the commit and merge it into your branch, if it's only one like in our case , you can run
  git fsck --lost-found | awk '{ $2="commit" ; print $3}' | xargs -i git merge --ff-only {}
- 
 
- 
- 
- 
  ```
 
