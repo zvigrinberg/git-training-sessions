@@ -72,10 +72,16 @@ git checkout feature2
 git stash list
 ## according to the stash that show description containing feature2, pick the stash number, in this case:
 git stash apply stash@{0}
-## continue to work on feature2
+## continue to work on feature2 , do add, commit and push.
+git checkout feature1
+## according to the stash that show description containing feature1, pick the stash number, in this case:
+git stash apply stash@{1}
+## continue to work on feature1 , do add, commit and push.
+.....
+
 ```
 
-Note: When finishing with the work on feature2 and with the work of featrue1, it's recommended to clear the stash list:
+Note: When finishing with the work on feature2 and with the work of feature1, it's recommended to clear the stash list:
 ```
 git stash clear
 ```
