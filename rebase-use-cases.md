@@ -28,6 +28,7 @@
 ### Procedures
 #### Use case #1
 ```shell
+git init 
 git checkout main
 for i in {1..4} ; do echo "sample work $i" >> $i.out; git add $i.out; git commit -m "sample work $i"; done
 git log
