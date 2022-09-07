@@ -56,7 +56,7 @@ git checkout to resolve conflicts with ours/theirs \
 checkout from a commit from git log or HEAD~n from git reflog \
 git checkout --orphan to start a branch with new history, \
 git checkout HEAD . --no-overlay eliminate all indexed and not staged files from index and working tree(like git reset --hard)
-git checkout -p , interactively select chunks of a ref/commit/ref+(directory/file).
+git checkout -p , interactively select chunks of a ref/commit/ref+(directory/file), use after using git blame on the file
 
 
 git push -u origin new-branch-name(along with git checkout -b new-branch-name). \

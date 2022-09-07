@@ -87,6 +87,7 @@ git merge --strategy=octopus  feature1 feature2 feature3
     
       ##import new defined templated from library chart to application chart, and run helm template
       export HELM_EXPERIMENTAL_OCI=1
+      ## Don't forget to use git blame Chart.yaml + git log commit-id of infinity-common-lib repo change + git checkout commit-id@{1} -p Chart.yaml to demonstrate how to get from history a needed chunk from a file.
       helm dependency update
       helm template infinity-ms .
       ##We got errors because we had a typo in the name of the defined templated inclusion ## in resources, we need to specify "infinity-common-lib.myNewDefinedTemplateWithAnnotations" instead of "infinity-common-lib-myNewDefinedTemplateWithAnnotations", update a dozens of files to do this  change? way no! , this is time to use git reset --hard to discard all this incorrect modifications
