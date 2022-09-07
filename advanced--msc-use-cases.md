@@ -20,12 +20,11 @@ git merge --strategy=octopus  feature1 feature2 feature3
 ```shell
   git clone git@github.com:RHEcosystemAppEng-Temenos/infinity-helm-chart.git
   cd infinity-helm-chart
-  git fetch git@github.com:RHEcosystemAppEng-Temenos/temenos-ocp-deploys-automation.git main
+  git fetch git@github.com:RHEcosystemAppEng-Temenos/temenos-ocp-deploys-automation.git   main
   git checkout FETCH_HEAD infinity-ms/injections
-  # removing checked out directory from index and move it to be untracked, that way we can work in the directory with the new fetched directory but 
-    after we disconnected it from the git repo by tell it not to track it.
+  ## removing checked out directory from index and move it to be untracked, that way we can work in the directory with the new fetched directory but after we disconnected it from the git repo by tell it not to track it.
   git reset --mixed.
-  #update back FETCH_HEAD to be origin instead of foreign remote repo.
+  ## update back FETCH_HEAD to be origin instead of foreign remote repo.
   git fetch.
   
  ``` 
