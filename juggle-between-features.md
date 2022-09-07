@@ -57,6 +57,21 @@ git checkout feature/something@{1} .
 ```
 
 4.fourth way(temp commit, resetting and cherry pick temp commit using git cherry-pick -n commitId).
+```shell
+git add -u . 
+git commit -m "temp commit"
+git tag tempWork
+#rewind feature/something HEAD to the commit that was before temp commit.
+git reset HEAD@{1} --hard 
+git checkout main -b hotfix/fixBug
+## fix bug in code
+git add -u .
+git commit -m "bug fix"
+git push
+## Open PR on Remote server
+git checkout feature/something
+git cherry-pick -n tempWork
+```
 
 ## Use case 2 - Need to put a side a feature that is not mature for progressing with work(requirements not clear) but part of it is good, and move to another feature, continue with it, it's good but not complete, but in the meantime, a release branch should be closed before delivery urgently, and you must put it aside as well.
 
