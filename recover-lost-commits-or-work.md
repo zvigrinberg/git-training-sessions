@@ -12,9 +12,9 @@
 
 ## Procedure
 ```shell
-   git clone /tmp/git-recovery/
+   git clone git@github.com:zvigrinberg/git-recovery-demo.git
+   cd git-recovery-demo
    git log
-   cd git-recovery
    ll
    
    ##case 1 - basic recovery.
@@ -25,8 +25,9 @@
    ll
    git push
    ## reposition and setting HEAD to previous commit according to git log
-   git reset --hard 1a40853d5af4a561405da51546581c30c009590d
    git log
+   #takes the commit hash of the previous commit into reset --hard
+   git reset --hard 2d247b11dbd7dcad3e2091c06c1895f0cc0132e8
    ll
    ## force push to remote server to recover lost files..
    git push -f
