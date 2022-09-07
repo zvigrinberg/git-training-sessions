@@ -10,8 +10,8 @@
 ## Ordered Agenda
  1. Give an explanation about working-tree,index, local-repo, and remote repo.
  2. Explain what is HEAD in git\
-   a. How it gets updated\
-   b. Where is my HEAD - what is fast-forward merge and recursive 3 ways merge.\
+   a. Where is my HEAD - and How it gets updated\
+   b. What is fast-forward merge and recursive 3 ways merge.\
    c. What is a detached HEAD state and how to get out of this state.
  3. Integrating changes - Rebase vs Merge
 
