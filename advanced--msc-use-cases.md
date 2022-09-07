@@ -107,8 +107,8 @@ git merge --strategy=octopus  feature1 feature2 feature3
       ## Show new added commit with all of its files
       git show HEAD --name-only
       
-      ## we forgot to annotate configmaps resources with this new defined template, so 
-         let's do it:
+      ## we forgot to annotate configmaps resources with this new defined template, so let's do it:
+         
       find . | grep configmap | xargs -i sed -i -E  '/^[[:space:]]{2,4}annotations:/ a \ \ \ \ {{- include "infinity-common-lib.myNewDefinedTemplateWithAnnotations" . | nindent 4 }}' {}
     
       git commit -am "annotate configmaps resources with new defined template - myNewDefinedTemplateWithAnnotations"
