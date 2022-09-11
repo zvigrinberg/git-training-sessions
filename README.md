@@ -19,9 +19,12 @@
  5. [Talk about working in parallel on at least 2 branches and bring examples](./juggle-between-features.md)
  6. [Discuss about ways to resolve merge and rebase conflicts ](./merging-and-solving-conflicts.md)
  7. [Illustrate Several ways how to recover lost data/commits](./recover-lost-commits-or-work.md)
- 8. [Discuss about Rebase use cases and when tu use and when not to use, including demos](./rebase-use-cases.md)
+ 8. [Discuss about Rebase use cases and when to use and when not to use, including demos](./rebase-use-cases.md)
  9. [Show variety of git commands and usages, some of them advanced, including demos. ](./advanced--msc-use-cases.md)
-     
+
+## Due to Calendars' limitation, the agenda will be splited over 2 sessions:
+   - First session will cover sections 1-5(basic)
+   - Second session will cover sections 6-9(advanced).
 
 ## The following git commands are in the scope of git advanced sessions:
 git remote
