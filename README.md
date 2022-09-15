@@ -13,6 +13,9 @@
     Head is a pointer to the currently checkout out branch or commit/ref, it gives answer to the important question       - "where am i exactly currently in my repo?" \
     
     a. Where is my HEAD - and How it gets updated
+    
+    ![image](https://user-images.githubusercontent.com/75700623/190415951-20f1e708-a896-4026-8e91-d7f2c47564ec.png)
+
    
     b. What is fast-forward merge and recursive 3-way merge.
       
@@ -24,6 +27,7 @@
    ![image](https://user-images.githubusercontent.com/75700623/190338928-93191563-6b02-41de-9813-39599efb6fca.png)
 
  3. Integrating changes - Rebase vs Merge
+ 
 ![image](https://user-images.githubusercontent.com/75700623/190340062-360b7347-3a9e-4693-bbed-edb78f0d09c5.png)
 
  4. [Talk about use cases for starting repos and bring examples](./starting-a-repo.md)
