@@ -10,10 +10,21 @@
 ## Ordered Agenda
  1. Give an explanation about working-tree,index, local-repo, and remote repo.
  2. Explain what is HEAD in git\
-   a. Where is my HEAD - and How it gets updated\
-   b. What is fast-forward merge and recursive 3 ways merge.\
-   c. What is a detached HEAD state and how to get out of this state.
+    Head is a pointer to the currently checkout out branch or commit/ref, it gives answer to the important question       - "where am i exactly currently in my repo?" \
+    
+    a. Where is my HEAD - and How it gets updated
+   
+    b. What is fast-forward merge and recursive 3-way merge.
+      
+   ![image](https://user-images.githubusercontent.com/75700623/190339639-79afcd7d-836c-48c1-b581-9b8635095d7b.png)
+
+    c. What is a detached HEAD state and how to get out of this state(attached HEAD)
+      
+   ![image](https://user-images.githubusercontent.com/75700623/190339114-bf472f71-df93-42e7-8b31-cf84bdadcbe7.png)
+   ![image](https://user-images.githubusercontent.com/75700623/190338928-93191563-6b02-41de-9813-39599efb6fca.png)
+
  3. Integrating changes - Rebase vs Merge
+![image](https://user-images.githubusercontent.com/75700623/190340062-360b7347-3a9e-4693-bbed-edb78f0d09c5.png)
 
  4. [Talk about use cases for starting repos and bring examples](./starting-a-repo.md)
  5. [Talk about working in parallel on at least 2 branches and bring examples](./juggle-between-features.md)
