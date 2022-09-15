@@ -182,8 +182,9 @@ git merge --strategy=octopus  feature1 feature2 feature3
     git reset --hard / git restore --staged --worktree external-values.yaml
 
    ```
-   - git merge origin/main --strategy=recursive -X theirs - sometimes you forget about a clone for a long time, and you did some local standalone  work in the same repo without pushing it to remote repo, and you want after long time to get latest changes from remote - without getting conflicts, and without deleting the local repo and clone it again from url
+   - auto resolve a lot of conflicts in one shot(all conflicts will be resolved to our xor theirs version)git merge origin/main --strategy=recursive -X theirs - sometimes you forget about a clone for a long time, and you did some local standalone  work in the same repo without pushing it to remote repo, and you want after long time to get latest changes from remote - without getting conflicts, and without deleting the local repo and clone it again from url
    ```shell
+     cd ~/git/quarkus-quickstarts/
      ## First you're doing a regular git pull
      git pull
      
