@@ -37,9 +37,6 @@
  8. [Discuss about Rebase use cases and when to use and when not to use, including demos](./rebase-use-cases.md)
  9. [Show variety of git commands and usages, some of them advanced, including demos. ](./advanced--msc-use-cases.md)
 
-## Due to Calendars' limitation, the agenda will be splited over 2 sessions:
-   - First session will cover sections 1-5(basic)
-   - Second session will cover sections 6-9(advanced).
 
 ## The following git commands are in the scope of git advanced sessions:
 git remote
