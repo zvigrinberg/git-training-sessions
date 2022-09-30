@@ -26,6 +26,8 @@ git merge --strategy=octopus  feature1 feature2 feature3
   git reset --mixed.
   ## update back FETCH_HEAD to be origin instead of foreign remote repo.
   git fetch.
+
+  - git clone --sparse --filter=blob:none, git sparse-checkout set path/to/directory
   
  ``` 
   - Use git reset --soft to "cancel" commits but save your current work on index and worktree 
