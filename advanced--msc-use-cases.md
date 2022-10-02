@@ -27,7 +27,10 @@ git merge --strategy=octopus  feature1 feature2 feature3
   ## update back FETCH_HEAD to be origin instead of foreign remote repo.
   git fetch.
 
-  - git clone --sparse --filter=blob:none, git sparse-checkout set path/to/directory
+  - Checkout only part of repo
+    git clone --sparse --filter=blob:none --depth=1 --branch=master https://github.com/eugenp/tutorials.git
+    git sparse-checkout set performance-tests/
+    git sparse-checkout add javaxval/
   
  ``` 
   - Use git reset --soft to "cancel" commits but save your current work on index and worktree 
