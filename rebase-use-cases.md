@@ -5,12 +5,12 @@
    merges, and merging the branch to mainstream branch will result in a merge commit because fast-forwarding the HEAD is not an option(only recursive 3  
    ways merge is possible)
    
-2. When you started a feature branch featureA, and started to work on it, and then you forked another feature branch from it - featureB, and continue to work on it also, in this case, you might need to use rebase in the following 3 cases:
+2. When you started a feature branch feature2, and started to work on it, and then you forked another feature branch from it - feature3, and continue to work on it also, in this case, you might need to use rebase in the following 3 cases:
 
-      a. main branch progressed and featureB needs these updates in order to progress and for testing.   
+      a. main branch progressed and feature3 needs these updates in order to progress and for testing.   
      
-      b. if you did it by mistake and featureB already done work with at least 1 or 2 commits, and featureB has nothing to do with featureA, and 
-         don't want to be dependent on it(if featureA deleted without being merged to main then featureB remains/stuck with irrelevant commits and work).
+      b. if you did it by mistake and feature3 already done work with at least 1 or 2 commits, and feature3 has nothing to do with feature2, and 
+         don't want to be dependent on it(if feature2 deleted without being merged to main then featureB remains/stuck with irrelevant commits and work).
          
       c. if they're related, but only featureB is ready and can be integrated into main, but featureA still needs additional work.
    
@@ -53,7 +53,7 @@ for i in {23..24} ; do echo "infra work $i" >> $i.out; git add $i.out; git commi
 git checkout main
 git merge feature/important
 git branch -d feature/important
-## Show example of rebasing --onto main with start of replay after feature2, and also rebasing when feature2 deleted , --onto main with start of replay of commits after feature3@{7}
+## Show two examples of rebasing --onto main with start of replay after feature2, and also rebasing when feature2 deleted , --onto main with start of replay of commits after feature3@{7}
 git checkout feature3
 git rebase --onto=main feature2 feature3
 git branch -D feature2
