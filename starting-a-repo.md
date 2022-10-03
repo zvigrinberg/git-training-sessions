@@ -13,7 +13,7 @@ cd /go/to/directory/with/all/files
 git init
 git add -A
 git commit -m "initial commit containing mass of files"
-git remote add origin address_of_remote_repo(ssh/http).
+git remote add origin git@github.com:zvigrinberg/git-starting-repo.git
 git push -f -u origin main 
 ```
 
@@ -25,9 +25,10 @@ Note: of course you can clone the repo locally, and then copy the files to the l
 cd /go/to/directory/with/all/files
 git init
 git add -A
-git commit -m "initial commit containing important files"
-git pull --rebase  address_of_remote_repo(ssh/http)
-git remote add origin address_of_remote_repo(ssh/http).
+git commit -m "initial commit containing important files locally"
+git log
+git pull --rebase  git@github.com:zvigrinberg/git-starting-repo.git
+git remote add origin git@github.com:zvigrinberg/git-starting-repo.git
 git push -u origin main
 ```
 
@@ -35,10 +36,11 @@ git push -u origin main
 ```shell
 cd /go/to/directory/with/all/files
 git init
-git remote add origin address_of_remote_repo(ssh/http).
+git remote add origin git@github.com:zvigrinberg/git-starting-repo.git
 git pull origin main
+git status
 git add -A
-git commit -m "initial commit containing important files"
+git commit -m "initial commit containing another important files locally"
 git fetch --all
 
 

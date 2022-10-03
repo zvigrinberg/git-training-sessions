@@ -31,17 +31,14 @@
 git init 
 git checkout main
 for i in {1..4} ; do echo "sample work $i" >> $i.out; git add $i.out; git commit -m "sample work $i"; done
-git log
 git checkout -b feature/additionalWork
 for i in {5..8} ; do echo "additional work $i" >> $i.out; git add $i.out; git commit -m "additional work $i"; done
 git checkout main
 echo "create directly commit in main" >> main.out; git add main.out; git commit -m "create directly commit in main"
 git checkout feature/additionalWork 
 git rebase main
-git log
 git checkout main
 git merge feature/additionalWork
-git log
 ```
 
 #### Use case #2
@@ -50,19 +47,18 @@ git checkout -b feature2
 for i in {9..15} ; do echo "sample work $i" >> $i.out; git add $i.out; git commit -m "sample work $i"; done
 git checkout -b feature3
 for i in {16..22} ; do echo "additional work $i" >> $i.out; git add $i.out; git commit -m "additional work $i"; done
-git log
+
 git checkout main -b feature/important
 for i in {23..24} ; do echo "infra work $i" >> $i.out; git add $i.out; git commit -m "infrastructure work $i"; done
 git checkout main
 git merge feature/important
 git branch -d feature/important
-log
+## Show example of rebasing --onto main with start of replay after feature2, and also rebasing when feature2 deleted , --onto main with start of replay of commits after feature3@{7}
 git checkout feature3
 git rebase --onto=main feature2 feature3
 git branch -D feature2
 git checkout main
 git merge feature3
-git log
 
 git merge feature3
 git branch -d feature3

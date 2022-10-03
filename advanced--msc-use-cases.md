@@ -26,13 +26,13 @@ git merge --strategy=octopus  feature1 feature2 feature3
   git reset --mixed.
   ## update back FETCH_HEAD to be origin instead of foreign remote repo.
   git fetch.
-
-  - Checkout only part of repo
+ ``` 
+ - Checkout only part of repo
+```shell 
     git clone --sparse --filter=blob:none --depth=1 --branch=master https://github.com/eugenp/tutorials.git
     git sparse-checkout set performance-tests/
     git sparse-checkout add javaxval/
-  
- ``` 
+```    
   - Use git reset --soft to "cancel" commits but save your current work on index and worktree 
     , __*Example:*__
   ```shell
@@ -74,7 +74,7 @@ git merge --strategy=octopus  feature1 feature2 feature3
     ```shell
       git clone git@github.com:RHEcosystemAppEng-Temenos/temenos-ocp-deploys-automation.git
       cd temenos-ocp-deploys-automation
-      git checkout -b annotateWithNewTemplate
+      git checkout mainDemo -b annotateWithNewTemplate
       cd infinity-ms
       
       ## Create new defined template named "myNewDefinedTemplateWithAnnotations" inside 
