@@ -62,7 +62,6 @@ git merge feature3
 
 git merge feature3
 git branch -d feature3
-git log
 ```
 
 #### Use case #3
@@ -70,25 +69,18 @@ git log
    
    git checkout -b feature/something
    for i in {25..31} ; do echo "sample number $i" >> $i.out; git add $i.out; git commit -m "commit number $i"; done
-   git log
    git checkout HEAD@{4}
    git show HEAD
    git tag newBase
    git checkout feature/something
-   git log
    git checkout -b temp newBase
-   git log
    echo "sample number 27-28" >> 2728.out ; git add 2728.out ; git commit -m "commit number after 27, before 28"
-   git log
    git rebase temp feature/something
    git status
-   git log
    git checkout main
    git merge feature/something
-   git log
    git branch -d feature/something temp
    git tag -d newBase
-   git log
 
 ```
 
