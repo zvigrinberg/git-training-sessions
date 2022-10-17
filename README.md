@@ -109,6 +109,8 @@ git rev-parse HEAD/ref
  git submodule(optional)
  
 git reflog HEAD/{branchName}
+
+git whatchanged
  
 (*)git request-pull -p start-commit, repo/url, end commit
  
