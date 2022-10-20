@@ -262,6 +262,7 @@ Unmerged paths:
    Instead of regular merge, use --sqaush option to commit yourself the commit message in a way that will reflect more what happened when we resolved 
    conflicts:
    ```shell
+   [zgrinber@zgrinber git-demos]$ git reset --hard <commit-id-before-previous-merge-from-reflog>
    [zgrinber@zgrinber git-demos]$ git merge --squash thirdAndFourth 
     Auto-merging third.out
     CONFLICT (content): Merge conflict in third.out
@@ -277,7 +278,7 @@ Unmerged paths:
       new file:   fourth.out
       modified:   third.out
 
-    [zgrinber@zgrinber git-demos]$ git commit -m "merge thirdAndFourth branch by favoring its version of third.out"
+    [zgrinber@zgrinber git-demos]$ git commit -sm "merge thirdAndFourth branch by favoring its version of third.out, and add fourth.out"
     [main 4225382] merge thirdAndFourth branch by favoring its version of third.out
      2 files changed, 2 insertions(+), 1 deletion(-)
      create mode 100644 fourth.out
