@@ -705,6 +705,8 @@ git merge --strategy=octopus  feature1 feature2 feature3
    ## Approve the merge commit, and you'll notice that everything was merged without conflicts, by favoring everything from upstream rather than local in order to settle all the conflicts automatically.
    
    ```
+   
+ - In case you did commited local work, and didn't push it yet, and in the meantime there are new commits pushed from elsewhere to remote repo, show How to undo unecessary local merge from remote server,  and use instead git pull --rebase.
  ## git bisect demo
    Link to repo that show how to use git bisect with example [can be found here](https://github.com/zvigrinberg/git-bisect-demo)
     
