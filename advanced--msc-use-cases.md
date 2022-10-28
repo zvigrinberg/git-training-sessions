@@ -124,7 +124,7 @@ git merge --strategy=octopus  feature1 feature2 feature3
       git show HEAD --name-only
      
     ```
-  
+ - Use commit --amend to delete files from last commit. 
  
  - git add -p for staging selected hunks from file with edit hunk(e options in interactive menu)
  - then use git diff(implicit HEAD) --cached to see that only chunks selected are going to be added on next commit, this diff gives the difference  
