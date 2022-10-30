@@ -12,7 +12,7 @@
       b. if you did it by mistake and feature3 already done work with at least 1 or 2 commits, and feature3 has nothing to do with feature2, and 
          don't want to be dependent on it(if feature2 deleted without being merged to main then featureB remains/stuck with irrelevant commits and work).
          
-      c. if they're related, but only featureB is ready and can be integrated into main, but featureA still needs additional work.
+      c. if they're related, but only feature3 is ready and can be integrated into main, but feature2 still needs additional work.
    
       
 3. When you created a feature branch, and created a series of commits in it, and then you realize at the end, just before openning a PR to main, that you missed some work in the middle , and you want the history to be shown like this commit with its work is in the middle, although you "inserted" it in the past in retrospective with rebasing.
