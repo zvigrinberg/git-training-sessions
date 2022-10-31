@@ -47,7 +47,7 @@ git checkout -b feature2
 for i in {9..15} ; do echo "sample work $i" >> $i.out; git add $i.out; git commit -m "sample work $i"; done
 git checkout -b feature3
 for i in {16..22} ; do echo "additional work $i" >> $i.out; git add $i.out; git commit -m "additional work $i"; done
-
+git branch feature3-orig
 git checkout main -b feature/important
 for i in {23..24} ; do echo "infra work $i" >> $i.out; git add $i.out; git commit -m "infrastructure work $i"; done
 git checkout main
@@ -60,6 +60,8 @@ git branch -D feature2
 git checkout main
 git merge feature3
 git branch -d feature3
+git branch -D feature3-orig
+
 ```
 
 #### Use case #3
