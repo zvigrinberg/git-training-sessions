@@ -38,6 +38,7 @@ git checkout feature/additionalWork
 git rebase main
 git checkout main
 git merge feature/additionalWork
+git branch -d feature/additionalWork
 ```
 
 #### Use case #2
@@ -57,8 +58,6 @@ git checkout feature3
 git rebase --onto=main feature2 feature3
 git branch -D feature2
 git checkout main
-git merge feature3
-
 git merge feature3
 git branch -d feature3
 ```
