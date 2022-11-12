@@ -1,4 +1,4 @@
-# git-training-sessions - Main Page and index
+# Git - From Basic to Advance - Main Page and index
 
 
 ## Intro: Give brief on working-tree(working area), index(Staging area), local-repo, remote repo.
