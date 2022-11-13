@@ -86,6 +86,7 @@ git merge --strategy=octopus  feature1 feature2 feature3
       ##{{- end }}
       
       vi ../infinity-common-lib/templates/_helpers.tpl
+      git stash save helpers.tpl
       git status
       
       ## Add using sed utility new defined template to under annotations of all needed 
@@ -130,7 +131,14 @@ git merge --strategy=octopus  feature1 feature2 feature3
       git show HEAD --name-only
      
     ```
- - Use commit --amend to delete files from last commit. 
+ - Use commit --amend to delete changes from last commit. 
+ ```shell
+ # Suppose that we want to remove the defined template from templates/configmap alone
+ git reflog
+ git restore --source=HEAD@{2} templates/configmap.yaml --worktree
+ git commit --amend --no-edit
+
+ ```
  
  - git add -p for staging selected hunks from file with edit hunk(e options in interactive menu)
  - then use git diff(implicit HEAD) --cached to see that only chunks selected are going to be added on next commit, this diff gives the difference  
