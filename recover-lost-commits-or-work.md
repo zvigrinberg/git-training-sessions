@@ -27,7 +27,7 @@
    ## reposition and setting HEAD to previous commit according to git log
    git log
    #takes the commit hash of the previous commit into reset --hard
-   git reset --hard 2d247b11dbd7dcad3e2091c06c1895f0cc0132e8
+   git reset --hard HEAD@{1}
    ll
    ## force push to remote server to recover lost files..
    git push -f
