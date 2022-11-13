@@ -133,7 +133,7 @@ git merge --strategy=octopus  feature1 feature2 feature3
     ```
  - Use commit --amend to delete changes from last commit. 
  ```shell
- # Suppose that we want to remove the defined template from templates/configmap alone
+ # Suppose that we want to remove the defined template from templates/configmap.yaml alone
  git reflog
  git restore --source=HEAD@{2} templates/configmap.yaml --worktree
  git commit --amend --no-edit
