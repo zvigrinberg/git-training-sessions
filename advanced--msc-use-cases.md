@@ -74,13 +74,18 @@ git merge --strategy=octopus  feature1 feature2 feature3
     ```shell
       git clone git@github.com:RHEcosystemAppEng-Temenos/temenos-ocp-deploys-automation.git
       cd temenos-ocp-deploys-automation
+      git checkout remotes/origin/mainDemo -b mainDemo
       git checkout mainDemo -b annotateWithNewTemplate
       cd infinity-ms
       
       ## Create new defined template named "myNewDefinedTemplateWithAnnotations" inside 
       ## library chart
+      ##
+      ##{{- define "infinity-common-lib.myNewDefinedTemplateWithAnnotations" -}}
+      ##gitDemo: true
+      ##{{- end }}
+      
       vi ../infinity-common-lib/templates/_helpers.tpl
-    
       git status
       
       ## Add using sed utility new defined template to under annotations of all needed 
@@ -92,7 +97,7 @@ git merge --strategy=octopus  feature1 feature2 feature3
     
       ##import new defined templated from library chart to application chart, and run helm template
       export HELM_EXPERIMENTAL_OCI=1
-      ## Don't forget to use git blame Chart.yaml + git log commit-id of infinity-common-lib repo change + git checkout commit-id@{1} -p Chart.yaml to demonstrate how to get from history a needed chunk from a file.
+      helm registry login -u username quay.io
       helm dependency update
       helm template infinity-ms .
       ##We got errors because we had a typo in the name of the defined templated inclusion ## in resources, we need to specify "infinity-common-lib.myNewDefinedTemplateWithAnnotations" instead of "infinity-common-lib-myNewDefinedTemplateWithAnnotations", update a dozens of files to do this  change? way no! , this is time to use git reset --hard to discard all this incorrect modifications
@@ -102,12 +107,12 @@ git merge --strategy=octopus  feature1 feature2 feature3
       ##Now we got clean worktree and index, and we'll re-run sed command, this time with correct defined template name 
 
       find . | grep .yaml | grep -v dbinit | grep -v -E 'configmap|-config|crds|values' | xargs -i sed -i -E '/^[[:space:]]{2,4}annotations:/ a \ \ \ \ {{- include "infinity-common-lib.myNewDefinedTemplateWithAnnotations" . | nindent 4 }}' {}
-    
+      ## Don't forget to use git blame Chart.yaml + git log commit-id of infinity-common-lib repo change + git checkout commit-id@{1} -p Chart.yaml to   demonstrate how to get from history a needed chunk from a file.
       ## See that rendering of templates are now passed succesfully and verify on vi editor that the new annotationKey: annotationValue added to all resources
       helm template infinity-ms . | vi -
       ## Add all changes to index
       git add -u . 
-      git commit -m "annotate all resources with a group of annotations - myNewDefinedTemplateWithAnnotations"
+      git commit -sm "annotate all resources with a group of annotations - myNewDefinedTemplateWithAnnotations"
       
       ## Show new added commit with all of its files
       git show HEAD --name-only
@@ -119,6 +124,7 @@ git merge --strategy=octopus  feature1 feature2 feature3
       git commit -am "annotate configmaps resources with new defined template - myNewDefinedTemplateWithAnnotations"
       git log
       ## or amend the current commit to have modified configmaps also(together with other ## resources)
+      git add -u .
       git commit --amend
       git log
       git show HEAD --name-only
@@ -173,12 +179,16 @@ git merge --strategy=octopus  feature1 feature2 feature3
    ```shell
     git clone git@github.com:RHEcosystemAppEng-Temenos/infinity-helm-chart.git
     cd infinity-helm-chart/infinity
+    export HELM_EXPERIMENTAL_OCI=1
+    helm registry login -u username quay.io
+    helm dependency update
     ## Verify that you can see external-values.yaml in the worktree
     ll
     git rm external-values.yaml
     git status
     ## Verify that external-values.yaml no present in worktree(directory)
     ll 
+    
     ## Pack the chart without external-values.yaml   
     helm package .
     
