@@ -175,7 +175,7 @@ git merge --strategy=octopus  feature1 feature2 feature3
     cd infinity-helm-chart/infinity
     ## Verify that you can see external-values.yaml in the worktree
     ll
-    git rm external-values.yamlll
+    git rm external-values.yaml
     git status
     ## Verify that external-values.yaml no present in worktree(directory)
     ll 
