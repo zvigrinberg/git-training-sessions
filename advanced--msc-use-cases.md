@@ -145,15 +145,14 @@ git merge --strategy=octopus  feature1 feature2 feature3
  - then use git diff(implicit HEAD) --cached to see that only chunks selected are going to be added on next commit, this diff gives the difference  
    between ref and index.
 ```shell
-   vi functions.java
-   ## Add some dummy functions definition in java
-   git add functions.java
-   git commit -m "add functions.java"
-   git status
-   vi functions.java
+   #suppose that you have two unstaged function in file functions.java, one mature for prod and another doesn't:
+   
+   #Add only mature function
    git add -p functions.java
    git status
+   # see delta of mature function
    git diff --cached
+   # see delta of not Mature function
    git diff
    git commit -m "only mature function commited"
    git status
