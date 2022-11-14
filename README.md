@@ -10,7 +10,7 @@
 ## Ordered Agenda
  1. Give an explanation about working-tree,index, local-repo, and remote repo.
  2. Explain what is HEAD in git\
-    Head is a pointer to the currently checkout out branch or commit/ref, it gives answer to the important question       - "where am i exactly currently in my repo?" \
+    Head is a pointer to the currently checkout out branch or commit/ref, it gives answer to the important question       - "where am i exactly currently in my repo?"
     
     a. Where is my HEAD - and How it gets updated
     
