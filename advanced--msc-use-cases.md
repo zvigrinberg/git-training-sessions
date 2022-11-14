@@ -136,6 +136,7 @@ git merge --strategy=octopus  feature1 feature2 feature3
  # Suppose that we want to remove the defined template from templates/configmap.yaml alone
  git reflog
  git restore --source=HEAD@{2} templates/configmap.yaml --worktree
+ git add -u . 
  git commit --amend --no-edit
 
  ```
@@ -152,25 +153,19 @@ git merge --strategy=octopus  feature1 feature2 feature3
    vi functions.java
    git add -p functions.java
    git status
-   vi functions.java
-   git restore --staged functions.java
-   git status
-   vi functions.java
-   git add -p functions.java
-   git status
    git diff --cached
    git diff
    git commit -m "only mature function commited"
    git status
    git diff
    ll
+   cat functions.java
    git stash save not mature function saving
    git stash list
-   ll
-   vi file1.out
-   vi functions.java
-   git stash list
+   cat functions.java
    git stash pop
+   git status
+   cat functions.java
 
 ```
  - git diff (implicit HEAD) - only changes relative to index.
